@@ -1,5 +1,6 @@
 import { puppyList } from "./data.js";
 import { useState } from "react";
+import "./App.css";
 console.log(puppyList);
 import "./App.css";
 function App() {
@@ -9,7 +10,7 @@ function App() {
 
   console.log("puppyList: ", puppyList);
   console.log(featuredPup);
-
+  
   return (
     <div className="App">
       {puppies.map((puppy) => {
@@ -20,14 +21,13 @@ function App() {
         );
       })}
       {featPupId && (
-
-      <div>
-        <h2>{featuredPup.name}</h2>
-        <ul>
-          <li>Age: {featuredPup.age}</li>
-          <li>Email: {featuredPup.email}</li>
-        </ul>
-      </div>
+        <div>
+          <h2>{featuredPup.name}</h2>
+          <ul>
+            <li>Age: {featuredPup.age}</li>
+            <li>Email: {featuredPup.email}</li>
+          </ul>
+        </div>
       )}
     </div>
   );
